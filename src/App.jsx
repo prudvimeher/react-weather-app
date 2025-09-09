@@ -20,7 +20,7 @@ function App() {
   }
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <section className="app-container">
       <h1>Weather App</h1>
       <input
         type="text"
@@ -31,13 +31,13 @@ function App() {
       <button onClick={fetchWeather}>Search</button>
 
       {weather && weather.main && (
-        <div style={{ marginTop: "20px" }}>
+        <div className="weather-card">
           <h2>{weather.name}</h2>
           <p>{weather.main.temp}°C</p>
           <p>{weather.weather[0].description}</p>
         </div>
       )}
-    </div>
+    </section>
   );
 }
 
